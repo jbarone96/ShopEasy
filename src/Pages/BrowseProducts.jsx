@@ -5,23 +5,6 @@ import { db } from "../../firebase";
 
 const categories = ["All", "Electronics", "Clothing", "Home", "Books"];
 
-const generateProducts = () => {
-  return Array.from({ length: 40 }, (_, i) => {
-    const category = categories[(i % (categories.length - 1)) + 1];
-    return {
-      id: i + 1,
-      title: `Product ${i + 1}`,
-      description: `A great deal on product #${i + 1} you don't want to miss!`,
-      price: parseFloat((Math.random() * 100 + 10).toFixed(2)),
-      rating: parseFloat((Math.random() * 2 + 3).toFixed(1)),
-      image: `https://picsum.photos/seed/browse${i + 1}/400/300`,
-      category,
-    };
-  });
-};
-
-// const products = generateProducts();
-
 const ITEMS_PER_PAGE = 12;
 
 const BrowseProducts = () => {
@@ -162,7 +145,7 @@ const BrowseProducts = () => {
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-48 object-cover rounded mb-4"
+              className="w-full h-48 object-contain"
             />
             <div>
               <h2 className="text-xl font-semibold mb-1">{product.title}</h2>
