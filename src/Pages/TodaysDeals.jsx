@@ -3,6 +3,12 @@ import { useCart } from "../Utils/CartContext";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 
+const Spinner = () => (
+  <div className="flex justify-center items-center py-16">
+    <div className="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
+
 const TodaysDeals = () => {
   const { addToCart } = useCart();
   const [deals, setDeals] = useState([]);
@@ -10,14 +16,27 @@ const TodaysDeals = () => {
   const [sort, setSort] = useState("default");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchDeals = async () => {
-      const snapshot = await getDocs(collection(db, "todaysDeals"));
-      const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      setDeals(data);
-      const uniqueCategories = [...new Set(data.map((item) => item.category))];
-      setCategories(uniqueCategories);
+      try {
+        const snapshot = await getDocs(collection(db, "todaysDeals"));
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setDeals(data);
+        const uniqueCategories = [
+          ...new Set(data.map((item) => item.category)),
+        ];
+        setCategories(uniqueCategories);
+      } catch (error) {
+        console.error("Failed to fetch today's deals:", error);
+        setDeals([]);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchDeals();
@@ -44,6 +63,8 @@ const TodaysDeals = () => {
   } else if (sort === "rating") {
     filteredDeals.sort((a, b) => b.rating - a.rating);
   }
+
+  if (loading) return <Spinner />;
 
   return (
     <div className="text-white pt-4 px-8 max-w-6xl mx-auto">
@@ -104,7 +125,7 @@ const TodaysDeals = () => {
           <div
             key={deal.id}
             style={{ animationDelay: `${index * 100}ms` }}
-            className="bg-zinc-800 p-4 rounded-lg shadow-md hover:bg-zinc-700 transition-all duration-300 animate-fadeIn opacity-0 flex flex-col justify-between"
+            className="bg-zinc-800 p-4 rounded-lg shadow-md hover:bg-zinc-700 transition-all duration-300 animate-fadeIn opacity-0 flex flex-col justify-between h-full"
           >
             <img
               src={deal.image}
@@ -121,7 +142,11 @@ const TodaysDeals = () => {
               </div>
               <div>
                 <p className="text-yellow-400 font-bold">
-                  ${deal.price.toFixed(2)}
+                  $
+                  {(typeof deal.price === "string"
+                    ? parseFloat(deal.price)
+                    : deal.price
+                  ).toFixed(2)}
                 </p>
                 <p className="text-xs text-zinc-400 mb-4">
                   Rating: {deal.rating} ★

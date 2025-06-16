@@ -7,6 +7,12 @@ const categories = ["All", "Electronics", "Clothing", "Home", "Books"];
 
 const ITEMS_PER_PAGE = 12;
 
+const Spinner = () => (
+  <div className="flex justify-center items-center py-16">
+    <div className="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
+
 const BrowseProducts = () => {
   const { addToCart } = useCart();
   const [products, setProducts] = useState([]);
@@ -17,6 +23,26 @@ const BrowseProducts = () => {
     const saved = localStorage.getItem("browsePage");
     return saved ? parseInt(saved, 10) : 1;
   });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "browseProducts"));
+        const data = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProducts(data);
+      } catch (err) {
+        console.error("Failed to fetch products from Firestore:", err);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   let filtered =
     selectedCategory === "All"
@@ -39,23 +65,6 @@ const BrowseProducts = () => {
     filtered.sort((a, b) => b.rating - a.rating);
   }
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "browseProducts"));
-        const data = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setProducts(data);
-      } catch (err) {
-        console.error("Failed to fetch products from Firestore:", err);
-        setProducts([]);
-      }
-    };
-    fetchProducts();
-  }, []);
-
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentItems = filtered.slice(startIndex, startIndex + ITEMS_PER_PAGE);
@@ -72,6 +81,8 @@ const BrowseProducts = () => {
       }
     }, 0);
   };
+
+  if (loading) return <Spinner />;
 
   return (
     <div

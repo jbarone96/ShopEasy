@@ -1,15 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useCart } from "../Utils/CartContext";
-
-const fakeProducts = Array.from({ length: 20 }, (_, i) => ({
-  id: i + 1,
-  title: `Product ${i + 1}`,
-  description: `This is product number ${i + 1}. It's a great item.`,
-  price: parseFloat((Math.random() * 100 + 10).toFixed(2)),
-  rating: parseFloat((Math.random() * 2 + 3).toFixed(1)), // 3.0 to 5.0 stars
-  image: `https://picsum.photos/seed/product${i + 1}/400/300`,
-}));
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -18,14 +11,37 @@ function useQuery() {
 const SearchResults = () => {
   const query = useQuery().get("q")?.toLowerCase() || "";
   const { addToCart } = useCart();
+  const [products, setProducts] = useState([]);
   const [priceFilter, setPriceFilter] = useState("all");
   const [sort, setSort] = useState("default");
+  const [loading, setLoading] = useState(true);
 
-  let filtered = fakeProducts.filter(
-    (product) =>
-      product.title.toLowerCase().includes(query) ||
-      product.description.toLowerCase().includes(query)
-  );
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "browseProducts"));
+        const data = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProducts(data);
+      } catch (err) {
+        console.error("Failed to fetch products from Firestore:", err);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  let filtered = products.filter((product) => {
+    const title = product.title?.toLowerCase() || "";
+    const description = product.description?.toLowerCase() || "";
+    const category = product.category?.toLowerCase() || "";
+    const searchableWords = `${title} ${description} ${category}`.split(/\W+/);
+    return query ? searchableWords.some((word) => word === query) : true;
+  });
 
   if (priceFilter === "under50") {
     filtered = filtered.filter((p) => p.price < 50);
@@ -43,9 +59,17 @@ const SearchResults = () => {
     filtered.sort((a, b) => b.rating - a.rating);
   }
 
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-16">
+        <div className="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="text-white p-8 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-center">
+      <h1 className="text-3xl font-bold mb-6 text-center text-zinc-600">
         Search Results for "{query}"
       </h1>
 
@@ -91,7 +115,7 @@ const SearchResults = () => {
             <div
               key={product.id}
               style={{ animationDelay: `${index * 100}ms` }}
-              className="bg-zinc-800 p-4 rounded-lg shadow-md hover:bg-zinc-700 transition-all duration-300 animate-fadeIn opacity-0 flex flex-col"
+              className="bg-zinc-800 p-4 rounded-lg shadow-md hover:bg-zinc-700 transition-all duration-300 animate-fadeIn opacity-0 flex flex-col justify-between h-full"
             >
               <img
                 src={product.image}
@@ -103,7 +127,11 @@ const SearchResults = () => {
                 {product.description}
               </p>
               <p className="text-yellow-400 font-bold mb-1">
-                ${product.price.toFixed(2)}
+                $
+                {(typeof product.price === "string"
+                  ? parseFloat(product.price)
+                  : product.price
+                ).toFixed(2)}
               </p>
               <p className="text-xs text-zinc-400 mb-4">
                 Rating: {product.rating} ★
