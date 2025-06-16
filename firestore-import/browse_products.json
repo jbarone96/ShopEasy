@@ -1,0 +1,362 @@
+[
+  {
+    "id": "item1",
+    "title": "Wireless Keyboard",
+    "description": "A sleek, low-profile wireless keyboard with responsive keys and long battery life. Ideal for both office and gaming setups.",
+    "price": "79.99",
+    "rating": "3.7",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item2",
+    "title": "Noise Cancelling Earbuds",
+    "description": "Compact earbuds with active noise cancellation and deep bass, perfect for travel, workouts, and daily commutes.",
+    "price": "38.99",
+    "rating": "4.2",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item3",
+    "title": "LED Desk Lamp",
+    "description": "An adjustable LED desk lamp with multiple brightness levels and color temperatures. Great for work or reading.",
+    "price": "19.99",
+    "rating": "4.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Home"
+  },
+  {
+    "id": "item4",
+    "title": "Smart Plug",
+    "description": "WiFi-enabled smart plug that works with Alexa and Google Assistant for seamless home automation.",
+    "price": "17.99",
+    "rating": "3.3",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item5",
+    "title": "Travel Backpack",
+    "description": "Durable and water-resistant travel backpack with anti-theft compartments and USB charging port.",
+    "price": "77.99",
+    "rating": "4.3",
+    "image": "https://via.placeholder.com/200",
+    "category": "Clothing"
+  },
+  {
+    "id": "item6",
+    "title": "Ceramic Vase Set",
+    "description": "A trio of modern ceramic vases perfect for home or office decor. Great for fresh or faux flowers.",
+    "price": "31.99",
+    "rating": "3.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Home"
+  },
+  {
+    "id": "item7",
+    "title": "Yoga Mat",
+    "description": "Non-slip, eco-friendly yoga mat with excellent cushioning for all fitness levels and routines.",
+    "price": "132.99",
+    "rating": "4.6",
+    "image": "https://via.placeholder.com/200",
+    "category": "Sports"
+  },
+  {
+    "id": "item8",
+    "title": "Hiking Boots",
+    "description": "Rugged waterproof hiking boots with breathable lining and reinforced soles for all terrains.",
+    "price": "29.99",
+    "rating": "4.8",
+    "image": "https://via.placeholder.com/200",
+    "category": "Clothing"
+  },
+  {
+    "id": "item9",
+    "title": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker with rich stereo sound, deep bass, and 12-hour battery life.",
+    "price": "40.99",
+    "rating": "4.3",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item10",
+    "title": "Wall Art Print",
+    "description": "High-quality canvas wall art print that adds a modern touch to your living space or office.",
+    "price": "61.99",
+    "rating": "4.6",
+    "image": "https://via.placeholder.com/200",
+    "category": "Home"
+  },
+  {
+    "id": "item11",
+    "title": "Fiction Novel",
+    "description": "A gripping fiction novel filled with suspense, perfect for weekend reads and book club picks.",
+    "price": "109.99",
+    "rating": "3.5",
+    "image": "https://via.placeholder.com/200",
+    "category": "Books"
+  },
+  {
+    "id": "item12",
+    "title": "Children's Puzzle",
+    "description": "Brightly colored 100-piece puzzle that promotes problem-solving and hand-eye coordination in kids.",
+    "price": "17.99",
+    "rating": "4.4",
+    "image": "https://via.placeholder.com/200",
+    "category": "Toys"
+  },
+  {
+    "id": "item13",
+    "title": "Winter Jacket",
+    "description": "Insulated, weather-resistant winter jacket with hood. Ideal for cold and snowy conditions.",
+    "price": "16.99",
+    "rating": "4.6",
+    "image": "https://via.placeholder.com/200",
+    "category": "Clothing"
+  },
+  {
+    "id": "item14",
+    "title": "Screwdriver Set",
+    "description": "11-piece magnetic screwdriver set with ergonomic handles and a durable storage case.",
+    "price": "140.99",
+    "rating": "3.2",
+    "image": "https://via.placeholder.com/200",
+    "category": "Tools"
+  },
+  {
+    "id": "item15",
+    "title": "Camping Lantern",
+    "description": "Rechargeable LED camping lantern with multiple brightness modes and emergency SOS function.",
+    "price": "26.99",
+    "rating": "4.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Sports"
+  },
+  {
+    "id": "item16",
+    "title": "Skincare Serum",
+    "description": "Anti-aging skincare serum with hyaluronic acid and vitamin C for radiant, hydrated skin.",
+    "price": "73.99",
+    "rating": "3.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Beauty"
+  },
+  {
+    "id": "item17",
+    "title": "Blender",
+    "description": "High-speed countertop blender with stainless steel blades, ideal for smoothies, soups, and sauces.",
+    "price": "135.99",
+    "rating": "4.2",
+    "image": "https://via.placeholder.com/200",
+    "category": "Kitchen"
+  },
+  {
+    "id": "item18",
+    "title": "Tire Pressure Gauge",
+    "description": "Digital tire pressure gauge with LED display and auto shut-off for accurate readings.",
+    "price": "70.99",
+    "rating": "3.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Automotive"
+  },
+  {
+    "id": "item19",
+    "title": "Men's Watch",
+    "description": "Elegant stainless steel men's wristwatch with date display and water resistance.",
+    "price": "149.99",
+    "rating": "3.8",
+    "image": "https://via.placeholder.com/200",
+    "category": "Accessories"
+  },
+  {
+    "id": "item20",
+    "title": "Laptop Sleeve",
+    "description": "Padded laptop sleeve with shock absorption and sleek design for 13\u201315 inch laptops.",
+    "price": "47.99",
+    "rating": "4.6",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item21",
+    "title": "Smart Thermostat",
+    "description": "Energy-saving smart thermostat that adapts to your habits and integrates with smart home systems.",
+    "price": "74.99",
+    "rating": "3.2",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item22",
+    "title": "Electric Toothbrush",
+    "description": "Rechargeable electric toothbrush with 5 brushing modes and a 2-minute timer.",
+    "price": "120.99",
+    "rating": "4.4",
+    "image": "https://via.placeholder.com/200",
+    "category": "Beauty"
+  },
+  {
+    "id": "item23",
+    "title": "Garden Shears",
+    "description": "Heavy-duty garden shears with comfort grip handles and sharp blades for effortless trimming.",
+    "price": "127.99",
+    "rating": "4.6",
+    "image": "https://via.placeholder.com/200",
+    "category": "Tools"
+  },
+  {
+    "id": "item24",
+    "title": "Running Shorts",
+    "description": "Lightweight, moisture-wicking running shorts with built-in liner and back pocket.",
+    "price": "71.99",
+    "rating": "3.9",
+    "image": "https://via.placeholder.com/200",
+    "category": "Clothing"
+  },
+  {
+    "id": "item25",
+    "title": "Hair Dryer",
+    "description": "Ionic hair dryer with multiple heat settings and diffuser attachment for frizz-free styling.",
+    "price": "94.99",
+    "rating": "3.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Beauty"
+  },
+  {
+    "id": "item26",
+    "title": "Coffee Grinder",
+    "description": "Electric coffee grinder with stainless steel blades for consistent grind every time.",
+    "price": "106.99",
+    "rating": "4.9",
+    "image": "https://via.placeholder.com/200",
+    "category": "Kitchen"
+  },
+  {
+    "id": "item27",
+    "title": "Phone Tripod",
+    "description": "Flexible smartphone tripod with Bluetooth remote and universal phone mount.",
+    "price": "115.99",
+    "rating": "3.4",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item28",
+    "title": "Car Vacuum",
+    "description": "Handheld cordless car vacuum with high suction power and multiple nozzle attachments.",
+    "price": "119.99",
+    "rating": "3.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Automotive"
+  },
+  {
+    "id": "item29",
+    "title": "Desk Organizer",
+    "description": "Multi-compartment desk organizer to keep pens, notepads, and accessories in order.",
+    "price": "26.99",
+    "rating": "3.0",
+    "image": "https://via.placeholder.com/200",
+    "category": "Office"
+  },
+  {
+    "id": "item30",
+    "title": "Throw Blanket",
+    "description": "Soft fleece throw blanket that adds warmth and style to your couch or bed.",
+    "price": "107.99",
+    "rating": "3.4",
+    "image": "https://via.placeholder.com/200",
+    "category": "Home"
+  },
+  {
+    "id": "item31",
+    "title": "LED Strip Lights",
+    "description": "Color-changing LED strip lights with remote control and adhesive backing for easy setup.",
+    "price": "79.99",
+    "rating": "3.6",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item32",
+    "title": "Shower Speaker",
+    "description": "Waterproof Bluetooth shower speaker with suction cup and built-in microphone.",
+    "price": "142.99",
+    "rating": "3.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item33",
+    "title": "Crossbody Bag",
+    "description": "Compact crossbody bag with adjustable strap and RFID-blocking compartments.",
+    "price": "80.99",
+    "rating": "3.2",
+    "image": "https://via.placeholder.com/200",
+    "category": "Accessories"
+  },
+  {
+    "id": "item34",
+    "title": "Gaming Mouse",
+    "description": "Ergonomic gaming mouse with programmable buttons and customizable RGB lighting.",
+    "price": "120.99",
+    "rating": "3.9",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item35",
+    "title": "Notebook Set",
+    "description": "Set of three lined notebooks with durable covers, ideal for journaling or note-taking.",
+    "price": "72.99",
+    "rating": "3.2",
+    "image": "https://via.placeholder.com/200",
+    "category": "Office"
+  },
+  {
+    "id": "item36",
+    "title": "Electric Kettle",
+    "description": "Fast-boiling electric kettle with auto shut-off and boil-dry protection.",
+    "price": "150.99",
+    "rating": "4.1",
+    "image": "https://via.placeholder.com/200",
+    "category": "Kitchen"
+  },
+  {
+    "id": "item37",
+    "title": "Face Cleanser",
+    "description": "Gentle foaming face cleanser suitable for all skin types, removes makeup and impurities.",
+    "price": "106.99",
+    "rating": "3.3",
+    "image": "https://via.placeholder.com/200",
+    "category": "Beauty"
+  },
+  {
+    "id": "item38",
+    "title": "Wireless Charger",
+    "description": "10W wireless charging pad compatible with iPhone, Samsung, and other Qi-enabled devices.",
+    "price": "30.99",
+    "rating": "4.9",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  },
+  {
+    "id": "item39",
+    "title": "Toolbox",
+    "description": "Sturdy toolbox with removable tray and secure latches for home and garage use.",
+    "price": "104.99",
+    "rating": "4.5",
+    "image": "https://via.placeholder.com/200",
+    "category": "Tools"
+  },
+  {
+    "id": "item40",
+    "title": "Fitness Tracker",
+    "description": "Fitness tracker with heart rate monitor, step counter, sleep tracking, and phone notifications.",
+    "price": "132.99",
+    "rating": "4.2",
+    "image": "https://via.placeholder.com/200",
+    "category": "Electronics"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Sony WH-1000XM6 Headphones",
+    "description": "Top-tier noise cancellation and long battery life for immersive audio.",
+    "price": 84.66,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850054/photo-1674658556545-f18d4080ab6c_en924w.jpg",
+    "category": "Audio",
+    "rating": 4.1
+  },
+  {
+    "title": "Apple iPhone 13",
+    "description": "Fast performance, amazing camera, and sleek new design.",
+    "price": 104.39,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850050/461978_2723_L2_ccgbli.jpg",
+    "category": "Electronics",
+    "rating": 4.2
+  },
+  {
+    "title": "GoPro HERO12 Black",
+    "description": "Capture stunning 5.3K60 video and 27MP photos with smooth stabilization.",
+    "price": 247.55,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850048/58f6629b-e9e2-440a-bfc7-0e80ffc1a728_utnmk0.jpg",
+    "category": "Cameras",
+    "rating": 4.8
+  },
+  {
+    "title": "Samsung Galaxy Watch 5",
+    "description": "Advanced health tracking and rugged design for everyday wear.",
+    "price": 267.35,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850051/fitbit_fb421bkbk_charge_5_fitness_1661542_wqyjtj.jpg",
+    "category": "Fitness",
+    "rating": 4.1
+  },
+  {
+    "title": "Anker Portable Charger",
+    "description": "High-speed USB-C charging in a compact, durable design.",
+    "price": 101.7,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850054/photo-1593642632823-8f785ba67e45_yab3ka.jpg",
+    "category": "Accessories",
+    "rating": 4.4
+  },
+  {
+    "title": "Nintendo Switch OLED",
+    "description": "Portable gaming console with OLED screen and enhanced audio.",
+    "price": 149.42,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850053/istockphoto-1126642401-612x612_k1zvbs.jpg",
+    "category": "Gaming",
+    "rating": 4.7
+  },
+  {
+    "title": "Instant Pot Duo Crisp",
+    "description": "All-in-one pressure cooker and air fryer combo with 11 settings.",
+    "price": 297.21,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850048/61E4b5drxzS._AC_UF1000_1000_QL80__jyneo1.jpg",
+    "category": "Appliances",
+    "rating": 4.2
+  },
+  {
+    "title": "Dell XPS 15 Laptop",
+    "description": "Powerful laptop with a vivid display, ideal for productivity and creation.",
+    "price": 109.91,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850051/g30555H6350-o_right_ysasjn.jpg",
+    "category": "Computers",
+    "rating": 3.9
+  },
+  {
+    "title": "JBL Flip 6 Bluetooth Speaker",
+    "description": "Rugged, waterproof speaker with bold sound and deep bass.",
+    "price": 228.84,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850050/710exCeNPJL._AC_UF894_1000_QL80__e9y3vn.jpg",
+    "category": "Audio",
+    "rating": 4.0
+  },
+  {
+    "title": "Nespresso Vertuo Plus",
+    "description": "One-touch brewing with rich flavor and elegant design.",
+    "price": 166.3,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850050/apple_iphone-12_2-up_geo_10132020_inline.jpg.large_xd2f6i.jpg",
+    "category": "Appliances",
+    "rating": 4.8
+  },
+  {
+    "title": "Apple Watch SE",
+    "description": "Essential fitness and wellness tracking with sleek style.",
+    "price": 118.33,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850048/61YHNvRNaCL_grqzy6.jpg",
+    "category": "Fitness",
+    "rating": 5.0
+  },
+  {
+    "title": "Amazon Echo Dot (5th Gen)",
+    "description": "Smart speaker with Alexa, improved sound, and temperature sensor.",
+    "price": 231.57,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850047/1-wh-1000xm6-standard-silver-large_utueah.jpg",
+    "category": "Smart Home",
+    "rating": 4.1
+  },
+  {
+    "title": "Bose SoundLink Flex",
+    "description": "Compact speaker with rich sound and long battery life.",
+    "price": 249.18,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850054/photo-1608043152269-423dbba4e7e1_icrizq.jpg",
+    "category": "Audio",
+    "rating": 4.2
+  },
+  {
+    "title": "Logitech MX Master 3S Mouse",
+    "description": "Ergonomic wireless mouse with customizable buttons and MagSpeed scroll.",
+    "price": 178.18,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850049/71gRys9Z-sL_gqdo8o.jpg",
+    "category": "Accessories",
+    "rating": 4.4
+  },
+  {
+    "title": "Roomba j7+ Robot Vacuum",
+    "description": "Smart vacuum with precision navigation and self-emptying bin.",
+    "price": 260.04,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850052/istockphoto-501240691-612x612_ry81mx.jpg",
+    "category": "Appliances",
+    "rating": 4.9
+  },
+  {
+    "title": "Samsung 55\u201d 4K Smart TV",
+    "description": "Vibrant picture and smart features with a sleek design.",
+    "price": 185.17,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850052/IRobot_Roomba_780_nkzbky.jpg",
+    "category": "Electronics",
+    "rating": 4.7
+  },
+  {
+    "title": "Fitbit Charge 6",
+    "description": "Health metrics, GPS, and Google apps on your wrist.",
+    "price": 109.18,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850048/61jYjeuNUnL_gnc1ot.jpg",
+    "category": "Fitness",
+    "rating": 4.9
+  },
+  {
+    "title": "KitchenAid Artisan Mixer",
+    "description": "Iconic stand mixer with powerful motor and stylish color.",
+    "price": 215.03,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850055/White_KitchenAid_mixer__KSM150PSWH_vamvnp.jpg",
+    "category": "Appliances",
+    "rating": 4.0
+  },
+  {
+    "title": "Philips Hue Smart Bulbs",
+    "description": "Smart home lighting with millions of colors and remote access.",
+    "price": 288.68,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850049/518PGIaxCPL._AC_UF894_1000_QL80__hcr1lu.jpg",
+    "category": "Smart Home",
+    "rating": 5.0
+  },
+  {
+    "title": "HP Envy 6055e Printer",
+    "description": "All-in-one wireless printer for home and remote work needs.",
+    "price": 138.36,
+    "image": "https://res.cloudinary.com/dkasrpjfk/image/upload/v1749850052/hero__gk2727ue87qm_large_pouzxn.jpg",
+    "category": "Office",
+    "rating": 3.8
+  }
+]
