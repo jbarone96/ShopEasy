@@ -47,7 +47,9 @@ const TodaysDeals = () => {
 
   return (
     <div className="text-white pt-4 px-8 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-center">Today's Deals</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center text-zinc-600">
+        Today's Deals
+      </h1>
 
       <div className="mb-4 flex flex-col sm:flex-row justify-start gap-4">
         <div className="flex flex-col">

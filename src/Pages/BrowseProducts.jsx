@@ -78,7 +78,9 @@ const BrowseProducts = () => {
       id="browse-top"
       className="text-white px-8 pt-4 pb-8 max-w-6xl mx-auto scroll-mt-24"
     >
-      <h1 className="text-3xl font-bold mb-4 text-center">Browse Products</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center text-zinc-600">
+        Browse Products
+      </h1>
 
       <div className="flex flex-wrap justify-center gap-3 mb-6">
         {categories.map((cat) => (
@@ -145,7 +147,7 @@ const BrowseProducts = () => {
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-48 object-contain"
+              className="w-full h-48 object-contain mx-auto p-2"
             />
             <div>
               <h2 className="text-xl font-semibold mb-1">{product.title}</h2>

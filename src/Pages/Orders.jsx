@@ -44,7 +44,7 @@ const Orders = () => {
       <h1 className="text-3xl font-bold mb-6 text-zinc-600">Your Orders</h1>
 
       {loading ? (
-        <p className="text-zinc-400">Loading orders...</p>
+        <p className="text-zinc-400">You don't have any orders.</p>
       ) : orders.length === 0 ? (
         <p className="text-zinc-400">You haven't placed any orders yet.</p>
       ) : (

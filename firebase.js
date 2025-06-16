@@ -16,14 +16,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBlzm_33q7oMTUk8NZEN7o7Z8IlEBivh2Y",
-//   authDomain: "shopeasy-58db8.firebaseapp.com",
-//   projectId: "shopeasy-58db8",
-//   storageBucket: "shopeasy-58db8.firebasestorage.app",
-//   messagingSenderId: 772659196629,
-//   appId: "1:772659196629:web:dd9b8a3a7ecb7250ec285c",
-// };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

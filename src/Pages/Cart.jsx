@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const itemMap = {};
-  // moved below after cartItems are processed
   const { cartItems, removeFromCart, clearCart } = useCart();
   const navigate = useNavigate();
 
@@ -37,41 +36,47 @@ const Cart = () => {
         <p className="text-center text-zinc-400">Your cart is empty.</p>
       ) : (
         <div className="space-y-6">
-          {groupedItems.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center bg-zinc-800 rounded-lg p-4 shadow-md justify-between"
-            >
-              <div className="flex items-center gap-4">
-                {item.image && (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-20 h-20 object-cover rounded"
-                  />
-                )}
-                <div>
-                  <h2 className="text-lg font-semibold">{item.title}</h2>
-                  <p className="text-yellow-400 font-medium">{item.price}</p>
-                  <p className="text-sm text-zinc-300">
-                    Item Total: $
-                    {(
-                      parseFloat(item.price.replace("$", "")) * item.quantity
-                    ).toFixed(2)}
-                  </p>
-                  <p className="text-sm text-zinc-300">
-                    Quantity: {item.quantity}
-                  </p>
-                </div>
-              </div>
-              <button
-                onClick={() => removeFromCart(item)}
-                className="text-red-400 hover:text-red-300 font-medium"
+          {groupedItems.map((item, index) => {
+            const numericPrice =
+              typeof item.price === "string"
+                ? parseFloat(item.price.replace("$", ""))
+                : parseFloat(item.price);
+
+            return (
+              <div
+                key={index}
+                className="flex items-center bg-zinc-800 rounded-lg p-4 shadow-md justify-between"
               >
-                Remove
-              </button>
-            </div>
-          ))}
+                <div className="flex items-center gap-4">
+                  {item.image && (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-20 h-20 object-cover rounded"
+                    />
+                  )}
+                  <div>
+                    <h2 className="text-lg font-semibold">{item.title}</h2>
+                    <p className="text-yellow-400 font-medium">
+                      ${numericPrice.toFixed(2)}
+                    </p>
+                    <p className="text-sm text-zinc-300">
+                      Item Total: ${(numericPrice * item.quantity).toFixed(2)}
+                    </p>
+                    <p className="text-sm text-zinc-300">
+                      Quantity: {item.quantity}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => removeFromCart(item)}
+                  className="text-red-400 hover:text-red-300 font-medium"
+                >
+                  Remove
+                </button>
+              </div>
+            );
+          })}
 
           <div className="flex justify-between items-center border-t border-zinc-700 pt-6">
             <button
@@ -84,7 +89,7 @@ const Cart = () => {
                   clearCart();
                 }
               }}
-              className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded"
+              className="bg-red-900 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded"
             >
               Clear Cart
             </button>

@@ -6,28 +6,31 @@ const Home = () => {
   const { addToCart } = useCart();
   const recommended = [
     {
-      id: 1,
+      id: 0,
       title: "Wireless Headphones",
       description: "Premium sound and all-day comfort.",
       price: 79.99,
       rating: 4.5,
-      image: "https://picsum.photos/seed/reco1/400/300",
+      image:
+        "https://res.cloudinary.com/dkasrpjfk/image/upload/v1750107095/35054231_mo2s8e.jpg",
     },
     {
-      id: 2,
+      id: 1,
       title: "Smart LED Lamp",
       description: "Modern lighting you control from your phone.",
       price: 49.99,
       rating: 4.7,
-      image: "https://picsum.photos/seed/reco2/400/300",
+      image:
+        "https://res.cloudinary.com/dkasrpjfk/image/upload/v1750107095/683251_732719_02_package_comping_r6enyx.jpg",
     },
     {
-      id: 3,
+      id: 2,
       title: "Portable Blender",
       description: "Make smoothies on the go — anytime, anywhere.",
       price: 34.99,
       rating: 4.3,
-      image: "https://picsum.photos/seed/reco3/400/300",
+      image:
+        "https://res.cloudinary.com/dkasrpjfk/image/upload/v1750107095/images_yr8noo.jpg",
     },
   ];
 
